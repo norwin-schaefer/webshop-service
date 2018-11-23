@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: Martin
+Build-Jdk: 11.0.1
+Implementation-Title: Web Shop
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: ch.schaefer.norwin.webshop
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/webshop
+Created-By: Maven Integration for Eclipse
+
