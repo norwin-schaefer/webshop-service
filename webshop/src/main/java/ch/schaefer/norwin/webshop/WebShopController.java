@@ -1,7 +1,7 @@
 package ch.schaefer.norwin.webshop;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -29,8 +29,14 @@ public class WebShopController {
 		return greeting;
 	}
 
-	@RequestMapping(method = RequestMethod.GET, path = "/products")
-	public ArrayList<Product> getAllProducts() {
+	@RequestMapping(method = RequestMethod.GET, path = "/products/all")
+	public List<Product> getAllProducts() {
 		return productRepository.getAllProducts();
 	}
+
+	@RequestMapping(method = RequestMethod.GET, path = "/products/search")
+	public List<Product> searchProducts(@RequestParam(name = "param") String param) {
+		return productRepository.searchProducts(param);
+	}
+
 }
