@@ -39,4 +39,9 @@ public class WebShopController {
 		return productRepository.searchProducts(param);
 	}
 
+	@RequestMapping(method = RequestMethod.GET, path = "/products/search2")
+	public List<Product> searchProducts(float fromPrice, float toPrice) {
+		return productRepository.searchProducts(fromPrice, toPrice);
+	}
+
 }
